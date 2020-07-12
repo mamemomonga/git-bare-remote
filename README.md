@@ -76,6 +76,7 @@ git cloneを実行します。ローカルにcloneします
 	$ mkdir .ssh
 	$ chmod 700 .ssh
 	$ vim .ssh/authorized_keys
+	$ chmod 644 .ssh/authorized_keys
 	公開鍵をペースト
 
 これで公開鍵認証の設定完了です。ホームフォルダのパーミッションを755にする必要があります。
