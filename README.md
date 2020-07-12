@@ -1,6 +1,6 @@
 # git-bare-remote
 
-gitはSSHがあれば相互にデータをやりとりできます。このツールは initとclone、リポジトリ一覧を表示するツールです。リポジトリを置くパスを決めておけば、毎回探す必要がありません。ここでは主に、Synology NASにGitリポジトリを設置する例を書きます。
+gitはSSHがあれば相互にデータをやりとりできます。このシェルスクリプトは initとclone、リポジトリ一覧を表示するツールです。リポジトリを置くパスを決めておけば、毎回探す必要がありません。ここでは主に、Synology NASにGitリポジトリを設置する例を書きます。
 
 # 必要要件
 
@@ -63,9 +63,13 @@ git cloneを実行します。ローカルにcloneします
 6. AuthorizedKeysFile .ssh/authorized_keys を追加
 7. vim を終了して、以下のコマンドでsshdを再起動
 
+コマンド
+
 	$ synoservicectl --reload sshd
 
 8. キーの追加
+
+コマンド
 
 	$ cd /var/services/homes/[ユーザ名]
 	$ chmod 755 .
@@ -75,5 +79,4 @@ git cloneを実行します。ローカルにcloneします
 	公開鍵をペースト
 
 これで公開鍵認証の設定完了です。ホームフォルダのパーミッションを755にする必要があります。
-
 
